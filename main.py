@@ -6,14 +6,9 @@ import requests
 # create a Flask instance
 app = Flask(__name__)
 
+@app.route("/",methods=['GET', 'POST'])
+# map URL route for function below
 
-#from gigiChat import app_gigiChat
-#app.register_blueprint(app_gigiChat)
-
-# create a Flask instance
-# connects default URL to render index.html
-
-@app.route('/base/')
 def base():
     return render_template("layouts/base.html")
 
